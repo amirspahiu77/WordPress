@@ -10,7 +10,17 @@
     <header>
         <section class="top-bar">
             <div class="logo">
-                Logo
+                <?php 
+                if (the_costum_logo(); ){
+                    the_custom_logo();
+                }else{
+                ?>
+                    <a href="<?php echo home_url('/') ?>" <span><?php bloginfo(' name '); ?>></a>
+                    <?php
+                }
+                ?>
+                
+                
             </div>
             <div class="searchbox">
                 Search Box
